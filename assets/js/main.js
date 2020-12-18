@@ -5,4 +5,9 @@ function jumpToTop() {
     });        
 }
 
-
+function jumpToAbout() {
+    window.scroll({ 
+        top: 520, 
+        behavior: "smooth" 
+        });    
+}
