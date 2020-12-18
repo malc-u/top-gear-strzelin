@@ -11,3 +11,10 @@ function jumpToAbout() {
         behavior: "smooth" 
         });    
 }
+
+function jumpToServices() {
+    window.scroll({ 
+        top: 940, 
+        behavior: "smooth" 
+        });    
+}
