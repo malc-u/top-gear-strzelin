@@ -15,3 +15,7 @@ body {
 .dark-font {
     color: #000000;
 }
+
+.navbar-dark {
+    background-color: #000000;
+}
