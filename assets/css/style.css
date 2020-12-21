@@ -67,3 +67,22 @@ body {
     padding-right: 1rem;
     transition: all .7s;
 }
+
+#hero {
+    background: url("../images/engineblock.jpg") no-repeat center center fixed;
+    position: relative;
+    min-height: 80vh;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
