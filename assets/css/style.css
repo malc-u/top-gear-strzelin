@@ -113,3 +113,15 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
 }
+
+.icons {
+    display: inline-block;
+}
+
+.social a:visited {
+    color: #fafafa;
+}
+
+.social a:hover {
+    color: #ffbd4a;
+}
