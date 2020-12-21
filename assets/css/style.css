@@ -19,3 +19,35 @@ body {
 .navbar-dark {
     background-color: #000000;
 }
+
+#top-banner {
+    font-weight: 500;
+}
+
+
+.nav-item, .nav-link {
+    padding: 0.5rem 4rem;
+    margin: auto;
+}
+
+.nav-item:hover {
+    background-color: #111111;
+    border-radius: 40px;
+}
+
+.dropdown-menu, .dropdown-item,
+.dropdown-menu:visited, .dropdown-menu:visited {
+    background-color: #000000;
+    color: #a6a6a6;
+}
+
+.dropdown-item,
+.dropdown-item:visited {
+    border-radius: 40px;
+}
+
+.dropdown-item:hover{
+    background-color: #111111;
+    border-radius: 40px;
+    color: #a6a6a6;
+}
