@@ -24,6 +24,10 @@ body {
     font-weight: 500;
 }
 
+.phone-icon:visited,
+.phone-icon:hover {
+    color: #000000;
+}
 
 .nav-item, .nav-link {
     padding: 0.5rem 4rem;
