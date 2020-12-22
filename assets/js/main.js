@@ -7,3 +7,9 @@ function scrollFunction() {
     document.getElementById("wheel").style.maxHeight = "7rem";
   }
 }
+
+
+// Navbar collapsing on click 
+  $('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
