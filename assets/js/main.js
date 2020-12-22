@@ -1,3 +1,4 @@
+// Function decreasing size of main top navbar when screen scrolled down
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
