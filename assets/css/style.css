@@ -76,7 +76,7 @@ body {
 }
 
 #hero {
-    background: url("../images/engineblock.jpg") no-repeat center center fixed;
+    background: url("../images/top_gear.jpg") no-repeat center center fixed;
     position: relative;
     min-height: 80vh;
     background-size: cover;
