@@ -30,8 +30,7 @@ const nobot = document.querySelector('#nobot');
 form.addEventListener("submit", (e)=> {
   e.preventDefault();
   sendmail();
-  
-  
+   
 });
 
 function sendmail() {
@@ -80,6 +79,7 @@ function refreshFields(){
   sender_name.value="";
   from_email.value="";
   msg.value="";
+  nobot.checked==false;
 }
 
 
