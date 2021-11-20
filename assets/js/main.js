@@ -16,38 +16,28 @@ function scrollFunction() {
 });
 
 
-/*
-
-EmailJS script to be completed
 
 
+//EmailJS script
+const submit = document.querySelector('#contact-btn');
 const contactForm = document.querySelector('#contact-form');
 
-contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const data = {
-        service_id: 'YOUR_SERVICE_ID',,
-        template_id: 'YOUR_TEMPLATE_ID',
-        user_id: 'YOUR_USER_ID',
-        template_params: {
-            "name": contactForm.name.value,
-            "email": contactForm.email.value,
-            "message": contactForm.message.value
-        }
-    };
+submit.addEventListener("click", sendmail);
 
-    $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
-        type: 'POST',
-        data: JSON.stringify(data),
-        contentType: 'application/json'
-    }).done(function () {
-        $('input').val('');
-        $('textarea').val('');
-        alert('Your email has been sent successfully!');
-        window.location.reload(true); 
-    }).fail(function (error) {
-        console.log('Oops... ' + JSON.stringify(error));
-        alert('Oops something went wrong, please try again');
-    });
-});
-*/
+function sendmail() {
+  let name = contactForm.name.value;
+  let from_email = contactForm.email.value;
+  let msg = contactForm.message.value;
+  
+  emailjs.send("service_xdj3kik", "template_18pps3g", {
+    to_name: "Top Gear",
+    from_name: name,
+    from_email: from_email,
+    message: msg,
+  }).then((response)=> {
+    alert("success")
+    console.log(response, response.status)
+  }, (error)=>{
+    alert(error)
+  });
+}
