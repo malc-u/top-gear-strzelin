@@ -19,25 +19,67 @@ function scrollFunction() {
 
 
 //EmailJS script
-const submit = document.querySelector('#contact-btn');
-const contactForm = document.querySelector('#contact-form');
 
-submit.addEventListener("click", sendmail);
+
+const form = document.querySelector('#contact-form');
+const sender_name = document.querySelector('#name');
+const from_email = document.querySelector('#email');
+const msg = document.querySelector('#message');
+const nobot = document.querySelector('#nobot');
+
+form.addEventListener("submit", (e)=> {
+  e.preventDefault();
+  sendmail();
+  
+  
+});
 
 function sendmail() {
-  let name = contactForm.name.value;
-  let from_email = contactForm.email.value;
-  let msg = contactForm.message.value;
-  
-  emailjs.send("service_xdj3kik", "template_18pps3g", {
+    
+  emailjs.send("service_xdj3kik","template_18pps3g", {
     to_name: "Top Gear",
-    from_name: name,
-    from_email: from_email,
-    message: msg,
+    from_name: sender_name.value,
+    reply_to: from_email.avlue,
+    message: msg.value,
   }).then((response)=> {
-    alert("success")
-    console.log(response, response.status)
+    if(response.status==200){
+      alertSuccess();
+      setTimeout(function(){ 
+        refreshFields()
+       }, 1000);
+
+    } else {
+      alertError();
+    }
   }, (error)=>{
-    alert(error)
+    alertError();
+    console.log(error)
+  })
+}
+
+function alertSuccess() {
+  swal({
+    title: "Dziękujemy!",
+    text: "Twoja wiadomość została pomyślnie wysłana.",
+    icon: "success",
+    button: "OK!",
   });
 }
+
+function alertError() {
+  swal({
+    icon: "error",
+    title: "Ups...",
+    text: "Coś poszło nie tak! Spróbój ponownie później",
+    button: "OK!",
+  });
+}
+
+
+function refreshFields(){
+  sender_name.value="";
+  from_email.value="";
+  msg.value="";
+}
+
+
