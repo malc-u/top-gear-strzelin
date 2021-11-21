@@ -38,7 +38,7 @@ function sendmail() {
   emailjs.send("service_xdj3kik","template_18pps3g", {
     to_name: "Top Gear",
     from_name: sender_name.value,
-    reply_to: from_email.avlue,
+    reply_to: from_email.value,
     message: msg.value,
   }).then((response)=> {
     if(response.status==200){
