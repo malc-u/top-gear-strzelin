@@ -59,7 +59,7 @@ function sendmail() {
 function alertSuccess() {
   swal({
     title: "Dziękujemy!",
-    text: "Twoja wiadomość została pomyślnie wysłana.",
+    text: "Twoja wiadomość została wysłana.",
     icon: "success",
     button: "OK!",
   });
